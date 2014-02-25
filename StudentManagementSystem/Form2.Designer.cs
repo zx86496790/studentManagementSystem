@@ -55,6 +55,7 @@
             this.btnUpdateRecord = new System.Windows.Forms.Button();
             this.btnDeleteRecord = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lblModifyDate = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numStudentInformationGPA)).BeginInit();
@@ -156,6 +157,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lblModifyDate);
             this.tabPage2.Controls.Add(this.lblStudentID);
             this.tabPage2.Controls.Add(this.lblUserID);
             this.tabPage2.Controls.Add(this.calRecordModifiedDate);
@@ -173,7 +175,7 @@
             // lblStudentID
             // 
             this.lblStudentID.AutoSize = true;
-            this.lblStudentID.Location = new System.Drawing.Point(176, 65);
+            this.lblStudentID.Location = new System.Drawing.Point(230, 74);
             this.lblStudentID.Name = "lblStudentID";
             this.lblStudentID.Size = new System.Drawing.Size(77, 12);
             this.lblStudentID.TabIndex = 6;
@@ -182,7 +184,7 @@
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Location = new System.Drawing.Point(178, 11);
+            this.lblUserID.Location = new System.Drawing.Point(230, 11);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(59, 12);
             this.lblUserID.TabIndex = 5;
@@ -191,24 +193,24 @@
             // calRecordModifiedDate
             // 
             this.calRecordModifiedDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.calRecordModifiedDate.Location = new System.Drawing.Point(178, 118);
+            this.calRecordModifiedDate.Location = new System.Drawing.Point(230, 164);
             this.calRecordModifiedDate.Name = "calRecordModifiedDate";
-            this.calRecordModifiedDate.Size = new System.Drawing.Size(142, 21);
+            this.calRecordModifiedDate.Size = new System.Drawing.Size(88, 21);
             this.calRecordModifiedDate.TabIndex = 4;
             // 
             // numChangeRecordStudentID
             // 
-            this.numChangeRecordStudentID.Location = new System.Drawing.Point(259, 62);
+            this.numChangeRecordStudentID.Location = new System.Drawing.Point(230, 101);
             this.numChangeRecordStudentID.Name = "numChangeRecordStudentID";
-            this.numChangeRecordStudentID.Size = new System.Drawing.Size(61, 21);
+            this.numChangeRecordStudentID.Size = new System.Drawing.Size(88, 21);
             this.numChangeRecordStudentID.TabIndex = 3;
             this.numChangeRecordStudentID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numChangeRecordUserID
             // 
-            this.numChangeRecordUserID.Location = new System.Drawing.Point(259, 6);
+            this.numChangeRecordUserID.Location = new System.Drawing.Point(230, 38);
             this.numChangeRecordUserID.Name = "numChangeRecordUserID";
-            this.numChangeRecordUserID.Size = new System.Drawing.Size(61, 21);
+            this.numChangeRecordUserID.Size = new System.Drawing.Size(88, 21);
             this.numChangeRecordUserID.TabIndex = 2;
             this.numChangeRecordUserID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -218,7 +220,7 @@
             this.lstChangeRecord.ItemHeight = 12;
             this.lstChangeRecord.Location = new System.Drawing.Point(6, 4);
             this.lstChangeRecord.Name = "lstChangeRecord";
-            this.lstChangeRecord.Size = new System.Drawing.Size(166, 244);
+            this.lstChangeRecord.Size = new System.Drawing.Size(220, 244);
             this.lstChangeRecord.TabIndex = 1;
             this.lstChangeRecord.SelectedIndexChanged += new System.EventHandler(this.lstChangeRecord_SelectedIndexChanged);
             // 
@@ -314,6 +316,7 @@
             this.btnDeleteRecord.TabIndex = 5;
             this.btnDeleteRecord.Text = "Delete Record";
             this.btnDeleteRecord.UseVisualStyleBackColor = true;
+            this.btnDeleteRecord.Click += new System.EventHandler(this.btnDeleteRecord_Click);
             // 
             // btnExit
             // 
@@ -324,6 +327,15 @@
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            // 
+            // lblModifyDate
+            // 
+            this.lblModifyDate.AutoSize = true;
+            this.lblModifyDate.Location = new System.Drawing.Point(230, 137);
+            this.lblModifyDate.Name = "lblModifyDate";
+            this.lblModifyDate.Size = new System.Drawing.Size(83, 12);
+            this.lblModifyDate.TabIndex = 7;
+            this.lblModifyDate.Text = "Modify Date :";
             // 
             // formManagement
             // 
@@ -388,5 +400,6 @@
         private System.Windows.Forms.TextBox txtUserLevel;
         private System.Windows.Forms.DateTimePicker calLastLoginDate;
         private System.Windows.Forms.DateTimePicker calUserCreatDate;
+        private System.Windows.Forms.Label lblModifyDate;
     }
 }
